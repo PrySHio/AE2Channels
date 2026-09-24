@@ -1,0 +1,10 @@
+{
+  "item.ae2channels.channel_meter": "Измеритель каналов",
+  "item.ae2channels.amplified_cable": "Усиленный ME-кабель",
+  "item.ae2channels.amplified_cable.description": "Поддерживает до 64 каналов",
+  "item.ae2channels.amplified_cable_128": "Продвинутый ME-кабель",
+  "item.ae2channels.amplified_cable_128.description": "Поддерживает до 128 каналов",
+  "item.ae2channels.amplified_cable_256": "Квантовый ME-кабель",
+  "item.ae2channels.amplified_cable_256.description": "Поддерживает до 256 каналов",
+  "itemGroup.ae2channels.ae2_channels": "AE2 Channels"
+}

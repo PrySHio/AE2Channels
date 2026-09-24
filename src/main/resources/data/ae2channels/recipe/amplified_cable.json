@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DSD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "ae2:fluix_smart_dense_cable"
+    },
+    "S": {
+      "item": "ae2:singularity"
+    }
+  },
+  "result": {
+    "id": "ae2channels:amplified_cable",
+    "count": 4
+  }
+}

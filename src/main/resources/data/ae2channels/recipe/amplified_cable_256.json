@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DSD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "ae2channels:amplified_cable_128"
+    },
+    "S": {
+      "item": "ae2:singularity"
+    }
+  },
+  "result": {
+    "id": "ae2channels:amplified_cable_256",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "item.ae2channels.channel_meter": "Channel Meter",
+  "item.ae2channels.amplified_cable": "Amplified ME Cable",
+  "item.ae2channels.amplified_cable.description": "Supports up to 64 channels",
+  "item.ae2channels.amplified_cable_128": "Advanced ME Cable",
+  "item.ae2channels.amplified_cable_128.description": "Supports up to 128 channels",
+  "item.ae2channels.amplified_cable_256": "Quantum ME Cable",
+  "item.ae2channels.amplified_cable_256.description": "Supports up to 256 channels",
+  "itemGroup.ae2channels.ae2_channels": "AE2 Channels"
+}
