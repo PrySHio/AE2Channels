@@ -4,7 +4,9 @@
   "package": "com.example.examplemod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AmplifiedGridNodeMixin"
+    "AmplifiedGridNodeMixin",
+    "WirelessTransmitterGridNodeMixin",
+    "WirelessTransmitterGridConnectionMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "linked=false": {
+      "model": "ae2channels:block/wireless_transmitter_off"
+    },
+    "linked=true": {
+      "model": "ae2channels:block/wireless_transmitter_on"
+    }
+  }
+}

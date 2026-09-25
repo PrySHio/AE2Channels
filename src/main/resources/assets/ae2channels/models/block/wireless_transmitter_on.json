@@ -1,0 +1,7 @@
+{
+  "parent": "ae2channels:block/wireless_transmitter_lights",
+  "textures": {
+    "block": "ae2channels:block/wireless_transmitter_on",
+    "lights": "ae2channels:block/wireless_transmitter_lights"
+  }
+}

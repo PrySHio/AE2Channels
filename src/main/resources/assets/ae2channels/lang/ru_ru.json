@@ -6,5 +6,8 @@
   "item.ae2channels.amplified_cable_128.description": "Поддерживает до 128 каналов",
   "item.ae2channels.amplified_cable_256": "Квантовый ME-кабель",
   "item.ae2channels.amplified_cable_256.description": "Поддерживает до 256 каналов",
+  "item.ae2channels.linker": "Связующее устройство",
+  "item.ae2channels.wireless_transmitter": "Беспроводной передатчик",
+  "block.ae2channels.wireless_transmitter": "Беспроводной передатчик",
   "itemGroup.ae2channels.ae2_channels": "AE2 Channels"
 }
