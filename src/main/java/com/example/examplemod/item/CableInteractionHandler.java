@@ -1,9 +1,7 @@
-package com.example.examplemod.ae2;
+package com.example.examplemod.item;
 
 import appeng.api.networking.IGridNode;
 import appeng.api.networking.IInWorldGridNodeHost;
-
-import com.example.examplemod.item.ModItems;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
