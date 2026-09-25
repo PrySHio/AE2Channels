@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FLF",
+    "LWC",
+    "FLF"
+  ],
+  "key": {
+    "F": {
+      "item": "ae2:fluix_crystal"
+    },
+    "L": {
+      "item": "ae2:logic_processor"
+    },
+    "W": {
+      "item": "ae2:wireless_access_point"
+    },
+    "C": {
+      "item": "ae2:calculation_processor"
+    }
+  },
+  "result": {
+    "id": "ae2channels:linker",
+    "count": 1
+  }
+}

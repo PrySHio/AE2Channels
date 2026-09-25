@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MWM",
+    "EIE",
+    "FCF"
+  ],
+  "key": {
+    "E": {
+      "item": "ae2:engineering_processor"
+    },
+    "F": {
+      "item": "ae2:fluix_pearl"
+    },
+    "C": {
+      "item": "ae2:singularity"
+    },
+    "I": {
+      "item": "ae2:interface"
+    },
+    "W": {
+      "item": "ae2:wireless_access_point"
+    },
+    "M": {
+      "item": "ae2:formation_core"
+    }
+  },
+  "result": {
+    "id": "ae2channels:wireless_transmitter",
+    "count": 1
+  }
+}
