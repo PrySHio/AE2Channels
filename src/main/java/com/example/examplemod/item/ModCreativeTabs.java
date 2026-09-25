@@ -9,6 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
+import com.example.examplemod.block.ModBlocks;
 
 public class ModCreativeTabs {
 
@@ -25,9 +26,13 @@ public class ModCreativeTabs {
                             .icon(() -> new ItemStack(ModItems.AMPLIFIED_CABLE.get()))
                             .displayItems((parameters, output) -> {
                                 output.accept(ModItems.CHANNEL_METER.get());
+
                                 output.accept(ModItems.AMPLIFIED_CABLE.get());
                                 output.accept(ModItems.AMPLIFIED_CABLE_128.get());
                                 output.accept(ModItems.AMPLIFIED_CABLE_256.get());
+
+                                output.accept(ModItems.WIRELESS_TRANSMITTER.get());
+                                output.accept(ModItems.LINKER.get());
                             })
                             .build()
             );
