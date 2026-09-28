@@ -41,8 +41,8 @@ public class CableInteractionHandler {
                 int usedChannels = node.getUsedChannels();
 
                 player.displayClientMessage(
-                        Component.literal(
-                                "Channels: " + usedChannels + " / " + maxChannels
+                        Component.translatable(
+                                "message.ae2channels.transmitter.channels", usedChannels, maxChannels
                         ),
                         true
                 );

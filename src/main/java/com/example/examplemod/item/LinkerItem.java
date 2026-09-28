@@ -33,8 +33,8 @@ public class LinkerItem extends Item {
                 instanceof WirelessTransmitterBlockEntity secondTransmitter)) {
 
             context.getPlayer().sendSystemMessage(
-                    Component.literal(
-                            "Нужно нажать по беспроводному передатчику."
+                    Component.translatable(
+                            "message.ae2channels.transmitter.click_required"
                     )
             );
 
@@ -62,7 +62,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Первый передатчик выбран."
+                                        "message.ae2channels.transmitter.first_selected"
                                 )
                         );
 
@@ -85,7 +85,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Это тот же самый передатчик."
+                                        "message.ae2channels.transmitter.same_transmitter"
                                 )
                         );
 
@@ -98,7 +98,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Первый передатчик больше не существует."
+                                        "message.ae2channels.transmitter.first_not_exists"
                                 )
                         );
 
@@ -148,7 +148,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Первый передатчик уже связан."
+                                        "message.ae2channels.transmitter.first_already_linked"
                                 )
                         );
 
@@ -160,7 +160,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Второй передатчик уже связан."
+                                        "message.ae2channels.transmitter.second_already_linked"
                                 )
                         );
 
@@ -178,7 +178,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Один из передатчиков ещё не подключён к AE2."
+                                        "message.ae2channels.transmitter.ae2_not_connected"
                                 )
                         );
 
@@ -203,7 +203,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Передатчики связаны!"
+                                        "message.ae2channels.transmitter.linked_success"
                                 )
                         );
 
@@ -211,7 +211,7 @@ public class LinkerItem extends Item {
 
                         context.getPlayer().sendSystemMessage(
                                 Component.literal(
-                                        "Не удалось создать соединение."
+                                        "message.ae2channels.transmitter.link_failed"
                                 )
                         );
                     }

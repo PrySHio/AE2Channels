@@ -29,7 +29,7 @@ public class WirelessTransmitterBlockEntity
 
         getMainNode().setFlags(GridFlags.DENSE_CAPACITY);
 
-        getMainNode().setIdlePowerUsage(32.0);
+        getMainNode().setIdlePowerUsage(16.0);
 
         getMainNode().setVisualRepresentation(
                 AEItemKey.of(ModItems.WIRELESS_TRANSMITTER.get())
@@ -113,7 +113,7 @@ public class WirelessTransmitterBlockEntity
 
     private void updatePowerUsage() {
 
-        double powerUsage = 32.0;
+        double powerUsage = 16.0;
 
         if (linkedTransmitter != null) {
 
@@ -123,7 +123,7 @@ public class WirelessTransmitterBlockEntity
                     );
 
             powerUsage =
-                    32.0 * (1.0 + distance * 1.1);
+                    16.0 * (1.0 + distance * 1.1);
         }
 
         getMainNode().setIdlePowerUsage(powerUsage);

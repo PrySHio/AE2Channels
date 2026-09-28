@@ -9,5 +9,19 @@
   "item.ae2channels.linker": "Connecting device",
   "item.ae2channels.wireless_transmitter": "Wireless Transmitter",
   "block.ae2channels.wireless_transmitter": "Wireless Transmitter",
+
+  "message.ae2channels.transmitter.linked": "Transmitter is linked.",
+  "message.ae2channels.transmitter.not_linked": "Transmitter is not linked.",
+  "message.ae2channels.transmitter.click_required": "You need to click on a wireless transmitter.",
+  "message.ae2channels.transmitter.first_selected": "First transmitter selected.",
+  "message.ae2channels.transmitter.same_transmitter": "This is the same transmitter.",
+  "message.ae2channels.transmitter.first_not_exists": "The first transmitter no longer exists.",
+  "message.ae2channels.transmitter.first_already_linked": "The first transmitter is already linked.",
+  "message.ae2channels.transmitter.second_already_linked": "The second transmitter is already linked.",
+  "message.ae2channels.transmitter.ae2_not_connected": "One of the transmitters is not yet connected to AE2.",
+  "message.ae2channels.transmitter.linked_success": "Transmitters are linked!",
+  "message.ae2channels.transmitter.link_failed": "Failed to create connection.",
+  "message.ae2channels.transmitter.channels": "Channels: %s / %s",
+
   "itemGroup.ae2channels.ae2_channels": "AE2 Channels"
 }

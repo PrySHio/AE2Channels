@@ -9,5 +9,19 @@
   "item.ae2channels.linker": "Связующее устройство",
   "item.ae2channels.wireless_transmitter": "Беспроводной передатчик",
   "block.ae2channels.wireless_transmitter": "Беспроводной передатчик",
+
+  "message.ae2channels.transmitter.linked": "Передатчик связан.",
+  "message.ae2channels.transmitter.not_linked": "Передатчик не связан.",
+  "message.ae2channels.transmitter.click_required": "Нужно нажать по беспроводному передатчику.",
+  "message.ae2channels.transmitter.first_selected": "Первый передатчик выбран.",
+  "message.ae2channels.transmitter.same_transmitter": "Это тот же самый передатчик.",
+  "message.ae2channels.transmitter.first_not_exists": "Первый передатчик больше не существует.",
+  "message.ae2channels.transmitter.first_already_linked": "Первый передатчик уже связан.",
+  "message.ae2channels.transmitter.second_already_linked": "Второй передатчик уже связан.",
+  "message.ae2channels.transmitter.ae2_not_connected": "Один из передатчиков ещё не подключён к AE2.",
+  "message.ae2channels.transmitter.linked_success": "Передатчики связаны!",
+  "message.ae2channels.transmitter.link_failed": "Не удалось создать соединение.",
+  "message.ae2channels.transmitter.channels": "Каналы: %s / %s",
+
   "itemGroup.ae2channels.ae2_channels": "AE2 Channels"
 }

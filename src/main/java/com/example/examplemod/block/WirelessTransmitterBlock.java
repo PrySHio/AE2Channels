@@ -81,16 +81,16 @@ public class WirelessTransmitterBlock
                 if (transmitter.getLinkedTransmitter() != null) {
 
                     player.sendSystemMessage(
-                            Component.literal(
-                                    "Передатчик связан."
+                            Component.translatable(
+                                    "message.ae2channels.transmitter.linked"
                             )
                     );
 
                 } else {
 
                     player.sendSystemMessage(
-                            Component.literal(
-                                    "Передатчик не связан."
+                            Component.translatable(
+                                    "message.ae2channels.transmitter.not_linked"
                             )
                     );
                 }
