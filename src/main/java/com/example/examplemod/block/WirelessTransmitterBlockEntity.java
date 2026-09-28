@@ -2,8 +2,10 @@ package com.example.examplemod.block;
 
 import appeng.api.networking.GridFlags;
 import appeng.api.networking.GridHelper;
+import appeng.api.stacks.AEItemKey;
 import appeng.blockentity.grid.AENetworkedBlockEntity;
 
+import com.example.examplemod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -24,10 +26,26 @@ public class WirelessTransmitterBlockEntity
                 pos,
                 blockState
         );
+
         getMainNode().setFlags(GridFlags.DENSE_CAPACITY);
+
+        getMainNode().setIdlePowerUsage(32.0);
+
+        getMainNode().setVisualRepresentation(
+                AEItemKey.of(ModItems.WIRELESS_TRANSMITTER.get())
+        );
     }
 
     public void serverTick() {
+
+        if (linkedTransmitter != null
+                && getLevel() != null
+                && !(getLevel().getBlockEntity(linkedTransmitter)
+                instanceof WirelessTransmitterBlockEntity)) {
+
+            clearLinkedTransmitter();
+            return;
+        }
 
         if (restoreDelay < 0) {
             return;
@@ -41,6 +59,7 @@ public class WirelessTransmitterBlockEntity
         restoreDelay = -1;
 
         restoreConnection();
+        updatePowerUsage();
         updatePoweredState();
     }
 
@@ -52,6 +71,7 @@ public class WirelessTransmitterBlockEntity
                 this,
                 transmitter -> {
                     transmitter.restoreDelay = 20;
+                    transmitter.updatePowerUsage();
                     transmitter.updatePoweredState();
                 }
         );
@@ -89,6 +109,24 @@ public class WirelessTransmitterBlockEntity
             );
         } catch (IllegalStateException ignored) {
         }
+    }
+
+    private void updatePowerUsage() {
+
+        double powerUsage = 32.0;
+
+        if (linkedTransmitter != null) {
+
+            double distance =
+                    Math.sqrt(
+                            linkedTransmitter.distSqr(getBlockPos())
+                    );
+
+            powerUsage =
+                    32.0 * (1.0 + distance * 1.1);
+        }
+
+        getMainNode().setIdlePowerUsage(powerUsage);
     }
 
     @Override
@@ -138,6 +176,7 @@ public class WirelessTransmitterBlockEntity
         this.linkedTransmitter = pos;
         setChanged();
 
+        updatePowerUsage();
         updatePoweredState();
     }
 
@@ -145,6 +184,7 @@ public class WirelessTransmitterBlockEntity
         this.linkedTransmitter = null;
         setChanged();
 
+        updatePowerUsage();
         updatePoweredState();
     }
 
