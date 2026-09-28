@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IMI",
+    "LVC",
+    "IFI"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "M": {
+      "item": "ae2:level_emitter"
+    },
+    "L": {
+      "item": "ae2:logic_processor"
+    },
+    "V": {
+      "item": "ae2:quartz_vibrant_glass"
+    },
+    "C": {
+      "item": "ae2:calculation_processor"
+    },
+    "F": {
+      "item": "ae2:fluix_smart_cable"
+    }
+  },
+  "result": {
+    "id": "ae2channels:channel_meter",
+    "count": 1
+  }
+}
