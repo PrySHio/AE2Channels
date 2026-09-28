@@ -12,6 +12,7 @@ import net.neoforged.fml.common.Mod;
 
 import com.example.examplemod.item.CableInteractionHandler;
 import com.example.examplemod.block.ModBlocks;
+import appeng.api.parts.PartModels;
 
 @Mod(AE2Channels.MODID)
 public class AE2Channels {
@@ -21,6 +22,13 @@ public class AE2Channels {
 
     public AE2Channels(IEventBus modEventBus) {
         LOGGER.info("AE2Channels loaded!");
+
+        PartModels.registerModels(
+                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(
+                        MODID,
+                        "part/cable/amplified/amplified"
+                )
+        );
 
         ModItems.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
