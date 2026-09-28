@@ -1,5 +1,6 @@
 package com.example.examplemod.block;
 
+import appeng.api.networking.GridFlags;
 import appeng.api.networking.GridHelper;
 import appeng.blockentity.grid.AENetworkedBlockEntity;
 
@@ -23,6 +24,7 @@ public class WirelessTransmitterBlockEntity
                 pos,
                 blockState
         );
+        getMainNode().setFlags(GridFlags.DENSE_CAPACITY);
     }
 
     public void serverTick() {

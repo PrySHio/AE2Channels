@@ -1,5 +1,6 @@
 package com.example.examplemod.ae2;
 
+import appeng.api.networking.GridFlags;
 import appeng.api.parts.IPartCollisionHelper;
 import appeng.api.util.AECableType;
 import appeng.items.parts.ColoredPartItem;
@@ -13,6 +14,7 @@ public class AmplifiedCablePart extends CablePart implements AmplifiedNode {
 
     public AmplifiedCablePart(ColoredPartItem<?> partItem) {
         super(partItem);
+        this.getMainNode().setFlags(GridFlags.DENSE_CAPACITY);
     }
 
     @Override
