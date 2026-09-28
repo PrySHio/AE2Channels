@@ -6,7 +6,11 @@
   "mixins": [
     "AmplifiedGridNodeMixin",
     "WirelessTransmitterGridNodeMixin",
-    "WirelessTransmitterGridConnectionMixin"
+    "WirelessTransmitterGridConnectionMixin",
+    "CableBusRenderStateMixin",
+    "CableBusContainerMixin",
+    "CableBusBakedModelMixin",
+    "CableBuilderMixin"
   ],
   "injectors": {
     "defaultRequire": 1
