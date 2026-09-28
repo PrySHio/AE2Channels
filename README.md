@@ -1,25 +1,45 @@
+# AE2 Channels
+================
+AE2 Channels is a lightweight addon for [Applied Energistics 2](https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2) that expands the channel capacity of ME networks.
 
-Installation information
-=======
+The mod adds upgraded ME cables with increased channel capacity, allowing larger and more complex AE2 networks to be built without replacing the entire network structure.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Features
+================
+* Amplified ME Cable — up to 64 channels
+* Advanced ME Cable — up to 128 channels
+* Quantum ME Cable — up to 256 channels
+* Wireless ME Transmitter
+* Linker for connecting wireless transmitters
+* Channel Meter for checking channel usage and capacity
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+## Requirements
+================
+* Minecraft 1.21.1
+* NeoForge
+* Applied Energistics 2
+* Java 21
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+The mod requires Applied Energistics 2 to function.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## Installation
+================
+1. Install Minecraft 1.21.1 with NeoForge.
+2. Install the required version of Applied Energistics 2.
+3. Download the latest version of AE2 Channels.
+4. Place the `.jar` file into your `mods` folder.
+5. Launch Minecraft.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Downloads
+================
+The latest releases are available on CurseForge:
+
+[Download AE2 Channels on CurseForge](https://www.curseforge.com/minecraft/mc-mods/ae2-channels)
+
+## Compatibility
+================
+AE2 Channels is designed specifically for Minecraft 1.21.1 with NeoForge and Applied Energistics 2.
+
+## License
+================
+AE2 Channels is licensed under the MIT License.
