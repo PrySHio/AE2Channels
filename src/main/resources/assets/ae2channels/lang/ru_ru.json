@@ -23,5 +23,7 @@
   "message.ae2channels.transmitter.link_failed": "Не удалось создать соединение.",
   "message.ae2channels.transmitter.channels": "Каналы: %s / %s",
 
-  "itemGroup.ae2channels.ae2_channels": "AE2 Channels"
+  "itemGroup.ae2channels.ae2_channels": "AE2 Channels",
+
+  "tooltip.ae2channels.channels": "Каналы: %1$s / %2$s"
 }

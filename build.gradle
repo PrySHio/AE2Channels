@@ -28,13 +28,6 @@ sourceSets.main.resources {
 
 repositories {
     mavenCentral()
-    maven {
-        name = 'cursemaven'
-        url = 'https://www.cursemaven.com'
-        content {
-            includeGroup 'curse.maven'
-        }
-    }
 }
 
 base {
