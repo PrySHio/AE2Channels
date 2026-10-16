@@ -7,13 +7,14 @@ import appeng.api.util.AECableType;
 import appeng.items.parts.ColoredPartItem;
 import appeng.parts.PartModel;
 import appeng.parts.networking.CablePart;
+import appeng.parts.networking.IUsedChannelProvider;
 
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Predicate;
 
-public class AmplifiedCablePart extends CablePart implements AmplifiedNode {
+public class AmplifiedCablePart extends CablePart implements AmplifiedNode, IUsedChannelProvider {
 
     public AmplifiedCablePart(ColoredPartItem<?> partItem) {
         super(partItem);

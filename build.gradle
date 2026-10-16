@@ -28,6 +28,13 @@ sourceSets.main.resources {
 
 repositories {
     mavenCentral()
+    maven {
+        name = 'cursemaven'
+        url = 'https://www.cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
 }
 
 base {
@@ -139,6 +146,11 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
     compileOnly "org.appliedenergistics:appliedenergistics2:19.2.17"
     localRuntime "org.appliedenergistics:appliedenergistics2:19.2.17"
+
+    // Jade for testing in runClient. AE2 shows "Channels: X of Y" in Jade for any
+    // part implementing IUsedChannelProvider, which includes our amplified cables.
+    // This is the same Jade build AE2 19.2.17 is developed against.
+    localRuntime "curse.maven:jade-324717:5427817"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
