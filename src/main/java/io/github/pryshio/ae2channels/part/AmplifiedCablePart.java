@@ -1,4 +1,4 @@
-package com.example.examplemod.ae2;
+package io.github.pryshio.ae2channels.part;
 
 import appeng.api.networking.GridFlags;
 import appeng.api.parts.IPartCollisionHelper;
@@ -14,11 +14,21 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Predicate;
 
-public class AmplifiedCablePart extends CablePart implements AmplifiedNode, IUsedChannelProvider {
+public class AmplifiedCablePart extends CablePart implements ChannelCapacity, IUsedChannelProvider {
 
     public AmplifiedCablePart(ColoredPartItem<?> partItem) {
         super(partItem);
         this.getMainNode().setFlags(GridFlags.DENSE_CAPACITY);
+    }
+
+    @Override
+    public int getAmplifiedMaxChannels() {
+        return 64;
+    }
+
+    @Override
+    public int getAmplifiedTier() {
+        return 1;
     }
 
     @Override
