@@ -1,8 +1,8 @@
-package com.example.examplemod.mixin;
+package io.github.pryshio.ae2channels.mixin;
 
 import appeng.api.networking.IGridNode;
 
-import com.example.examplemod.block.WirelessTransmitterBlockEntity;
+import io.github.pryshio.ae2channels.block.WirelessTransmitterBlockEntity;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(targets = "appeng.me.GridConnection")
-public class WirelessTransmitterGridConnectionMixin {
+public class GridConnectionChannelsMixin {
 
     @Inject(
             method = "getMaxChannels",
