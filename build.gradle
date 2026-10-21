@@ -152,6 +152,7 @@ dependencies {
     // part implementing IUsedChannelProvider, which includes our amplified cables.
     // This is the same Jade build AE2 19.2.17 is developed against.
     localRuntime "curse.maven:jade-324717:5427817"
+    compileOnly "curse.maven:jade-324717:5427817"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
