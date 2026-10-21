@@ -1,7 +1,8 @@
-package com.example.examplemod.block;
+package io.github.pryshio.ae2channels.registry;
 
-import com.example.examplemod.AE2Channels;
+import io.github.pryshio.ae2channels.AE2Channels;
 
+import io.github.pryshio.ae2channels.block.WirelessTransmitterBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;

@@ -1,6 +1,6 @@
-package com.example.examplemod.item;
+package io.github.pryshio.ae2channels.registry;
 
-import com.example.examplemod.AE2Channels;
+import io.github.pryshio.ae2channels.AE2Channels;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -9,7 +9,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
-import com.example.examplemod.block.ModBlocks;
 
 public class ModCreativeTabs {
 

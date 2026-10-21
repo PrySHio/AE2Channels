@@ -1,4 +1,4 @@
-package com.example.examplemod.render;
+package io.github.pryshio.ae2channels.client.render;
 
 public final class AmplifiedCableRenderContext {
 

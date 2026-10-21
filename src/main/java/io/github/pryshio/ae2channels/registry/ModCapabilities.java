@@ -1,4 +1,4 @@
-package com.example.examplemod.block;
+package io.github.pryshio.ae2channels.registry;
 
 import appeng.api.AECapabilities;
 

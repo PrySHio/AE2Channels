@@ -1,13 +1,10 @@
-package com.example.examplemod.mixin;
+package io.github.pryshio.ae2channels.client.mixin;
 
-import appeng.api.parts.IPart;
 import appeng.parts.CableBusContainer;
 import appeng.client.render.cablebus.CableBusRenderState;
 
-import com.example.examplemod.ae2.AmplifiedCablePart;
-import com.example.examplemod.ae2.AmplifiedCablePart128;
-import com.example.examplemod.ae2.AmplifiedCablePart256;
-import com.example.examplemod.render.AmplifiedCableRenderState;
+import io.github.pryshio.ae2channels.part.ChannelCapacity;
+import io.github.pryshio.ae2channels.client.render.AmplifiedCableRenderState;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -29,19 +26,9 @@ public class CableBusContainerMixin {
         CableBusContainer container =
                 (CableBusContainer) (Object) this;
 
-        IPart center = container.getPart(null);
-
-        int type = 0;
-
-        if (center != null) {
-            if (center.getClass() == AmplifiedCablePart.class) {
-                type = 1;
-            } else if (center.getClass() == AmplifiedCablePart128.class) {
-                type = 2;
-            } else if (center.getClass() == AmplifiedCablePart256.class) {
-                type = 3;
-            }
-        }
+        int type = container.getPart(null) instanceof ChannelCapacity amplified
+                ? amplified.getAmplifiedTier()
+                : 0;
 
         ((AmplifiedCableRenderState) (Object) renderState)
                 .ae2channels$setAmplifiedCableType(type);

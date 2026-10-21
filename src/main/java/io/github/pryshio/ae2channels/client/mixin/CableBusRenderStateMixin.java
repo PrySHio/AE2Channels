@@ -1,7 +1,7 @@
-package com.example.examplemod.mixin;
+package io.github.pryshio.ae2channels.client.mixin;
 
 import appeng.client.render.cablebus.CableBusRenderState;
-import com.example.examplemod.render.AmplifiedCableRenderState;
+import io.github.pryshio.ae2channels.client.render.AmplifiedCableRenderState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;

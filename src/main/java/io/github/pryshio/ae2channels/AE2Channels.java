@@ -1,17 +1,17 @@
-package com.example.examplemod;
+package io.github.pryshio.ae2channels;
 
-import com.example.examplemod.block.ModBlockEntities;
-import com.example.examplemod.block.ModCapabilities;
-import com.example.examplemod.item.ModItems;
-import com.example.examplemod.item.ModCreativeTabs;
+import io.github.pryshio.ae2channels.registry.ModBlockEntities;
+import io.github.pryshio.ae2channels.registry.ModCapabilities;
+import io.github.pryshio.ae2channels.registry.ModItems;
+import io.github.pryshio.ae2channels.registry.ModCreativeTabs;
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
-import com.example.examplemod.item.CableInteractionHandler;
-import com.example.examplemod.block.ModBlocks;
+import io.github.pryshio.ae2channels.item.ChannelMeterHandler;
+import io.github.pryshio.ae2channels.registry.ModBlocks;
 import appeng.api.parts.PartModels;
 
 @Mod(AE2Channels.MODID)
@@ -38,7 +38,7 @@ public class AE2Channels {
         modEventBus.addListener(ModCapabilities::register);
 
         net.neoforged.neoforge.common.NeoForge.EVENT_BUS.register(
-                CableInteractionHandler.class
+                ChannelMeterHandler.class
         );
     }
 }
