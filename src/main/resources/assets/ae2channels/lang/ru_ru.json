@@ -15,6 +15,7 @@
   "message.ae2channels.transmitter.click_required": "Нужно нажать по беспроводному передатчику.",
   "message.ae2channels.transmitter.first_selected": "Первый передатчик выбран.",
   "message.ae2channels.transmitter.same_transmitter": "Это тот же самый передатчик.",
+  "message.ae2channels.transmitter.other_dimension": "Первый передатчик находится в другом измерении.",
   "message.ae2channels.transmitter.first_not_exists": "Первый передатчик больше не существует.",
   "message.ae2channels.transmitter.first_already_linked": "Первый передатчик уже связан.",
   "message.ae2channels.transmitter.second_already_linked": "Второй передатчик уже связан.",
@@ -23,7 +24,11 @@
   "message.ae2channels.transmitter.link_failed": "Не удалось создать соединение.",
   "message.ae2channels.transmitter.channels": "Каналы: %s / %s",
 
-  "itemGroup.ae2channels.ae2_channels": "AE2 Channels",
+  "jade.ae2channels.transmitter.not_linked": "Не связан",
+  "jade.ae2channels.transmitter.online": "Связь онлайн",
+  "jade.ae2channels.transmitter.offline": "Связь офлайн",
+  "jade.ae2channels.transmitter.channels": "Каналы: %s / %s",
+  "config.jade.plugin_ae2channels.wireless_transmitter": "Беспроводной передатчик",
 
-  "tooltip.ae2channels.channels": "Каналы: %1$s / %2$s"
+  "itemGroup.ae2channels.ae2_channels": "AE2 Channels"
 }
