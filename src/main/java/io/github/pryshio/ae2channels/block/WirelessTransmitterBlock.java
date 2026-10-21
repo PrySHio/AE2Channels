@@ -1,5 +1,6 @@
-package com.example.examplemod.block;
+package io.github.pryshio.ae2channels.block;
 
+import io.github.pryshio.ae2channels.registry.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
@@ -8,8 +9,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.BlockHitResult;
 
 public class WirelessTransmitterBlock
         extends Block
@@ -33,7 +38,7 @@ public class WirelessTransmitterBlock
 
     @Override
     protected void createBlockStateDefinition(
-            net.minecraft.world.level.block.state.StateDefinition.Builder<Block, BlockState> builder
+            StateDefinition.Builder<Block, BlockState> builder
     ) {
         builder.add(LINKED);
     }
@@ -49,19 +54,22 @@ public class WirelessTransmitterBlock
         );
     }
 
+    private static final BlockEntityTicker<WirelessTransmitterBlockEntity> SERVER_TICKER =
+            (level, pos, state, blockEntity) -> blockEntity.serverTick();
+
     @Override
-    public <T extends BlockEntity> net.minecraft.world.level.block.entity.BlockEntityTicker<T> getTicker(
+    @SuppressWarnings("unchecked")
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(
             Level level,
             BlockState state,
-            net.minecraft.world.level.block.entity.BlockEntityType<T> blockEntityType
+            BlockEntityType<T> blockEntityType
     ) {
-        return level.isClientSide
-                ? null
-                : (level2, pos, state2, blockEntity) -> {
-            if (blockEntity instanceof WirelessTransmitterBlockEntity transmitter) {
-                transmitter.serverTick();
-            }
-        };
+        if (level.isClientSide
+                || blockEntityType != ModBlockEntities.WIRELESS_TRANSMITTER.get()) {
+            return null;
+        }
+
+        return (BlockEntityTicker<T>) SERVER_TICKER;
     }
 
     @Override
@@ -70,31 +78,18 @@ public class WirelessTransmitterBlock
             Level level,
             BlockPos pos,
             Player player,
-            net.minecraft.world.phys.BlockHitResult hit
+            BlockHitResult hit
     ) {
+        if (!level.isClientSide
+                && level.getBlockEntity(pos) instanceof WirelessTransmitterBlockEntity transmitter) {
 
-        if (!level.isClientSide) {
-
-            if (level.getBlockEntity(pos)
-                    instanceof WirelessTransmitterBlockEntity transmitter) {
-
-                if (transmitter.getLinkedTransmitter() != null) {
-
-                    player.sendSystemMessage(
-                            Component.translatable(
-                                    "message.ae2channels.transmitter.linked"
-                            )
-                    );
-
-                } else {
-
-                    player.sendSystemMessage(
-                            Component.translatable(
-                                    "message.ae2channels.transmitter.not_linked"
-                            )
-                    );
-                }
-            }
+            player.sendSystemMessage(
+                    Component.translatable(
+                            transmitter.getLinkedTransmitter() != null
+                                    ? "message.ae2channels.transmitter.linked"
+                                    : "message.ae2channels.transmitter.not_linked"
+                    )
+            );
         }
 
         return InteractionResult.SUCCESS;
