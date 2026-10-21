@@ -1,16 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.example.examplemod.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "package": "io.github.pryshio.ae2channels.mixin",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AmplifiedGridNodeMixin",
-    "WirelessTransmitterGridNodeMixin",
-    "WirelessTransmitterGridConnectionMixin",
-    "CableBusRenderStateMixin",
-    "CableBusContainerMixin",
-    "CableBusBakedModelMixin",
-    "CableBuilderMixin"
+    "GridNodeChannelsMixin",
+    "GridConnectionChannelsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
